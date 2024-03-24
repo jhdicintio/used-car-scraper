@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "used-cars"
+version = "0.1.0"
+description = "Webscraping for Used Car Prices"
+authors = ["Jack DiCintio <dicintio.jack@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.10.4"
+bs4 = "^0.0.2"
+lxml = "^5.1.0"
+pandas = "^2.2.1"
+matplotlib = "^3.8.3"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.0"
+
+# pyproject.toml
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+    "integration",
+]
+python_files = "*_test.py"
+python_classes = "*Test"
+python_functions = "*_test"
