@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Webscraping for Used Car Prices"
 authors = ["Jack DiCintio <dicintio.jack@gmail.com>"]
 readme = "README.md"
-packages = [{include = "src"}]
+packages = [{include = "used_cars"}]
 
 [build-system]
 requires = ["poetry-core"]
